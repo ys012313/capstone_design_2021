@@ -1,0 +1,746 @@
+2021-08-20 00:01:30 [RMI TCP Connection(117)-127.0.0.1] [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2021-08-20 00:01:30 [RMI TCP Connection(117)-127.0.0.1] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 00:01:30 [RMI TCP Connection(117)-127.0.0.1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2021-08-20 00:01:30 [RMI TCP Connection(117)-127.0.0.1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2021-08-20 14:53:47 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19524 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 14:53:47 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 14:53:47 [restartedMain] [INFO ] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-netty-shaded-1.13.1.jar referenced one or more files that do not exist: file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-core-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-context-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/gson-2.7.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/guava-20.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/error_prone_annotations-2.1.2.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/jsr305-3.0.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-contrib-grpc-metrics-0.12.3.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-api-0.12.3.jar
+2021-08-20 14:53:47 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-20 14:53:47 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-20 14:53:48 [restartedMain] [DEBUG] org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73a09c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 14:53:48 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1003 ms
+2021-08-20 14:53:49 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 14:53:49 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 14:53:49 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 14:53:49 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 14:53:49 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 2.042 seconds (JVM running for 2.828)
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [DEBUG] c.t.p.controller.UserController -  @@ getTotalPay call in UserController ==> 
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [DEBUG] com.taxi.project.service.UserService -  @@ getTotalPay call in UserService ==> 
+2021-08-20 14:54:00 [http-nio-8080-exec-1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-08-20 14:54:03 [http-nio-8080-exec-1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-08-20 14:54:03 [http-nio-8080-exec-1] [DEBUG] c.t.p.mapper.UserMapper.getTotalPay - ==>  Preparing: SELECT /* com.taxi.project.mapper.UserMapper.getTotalPay */ COALESCE(SUM(pay), 0) AS pay /* 월 미동승 요금 합계 */ , COALESCE(SUM(dutch_pay), 0) AS dutchPay /* 월 동승 합계 */ , COALESCE(ROUND(SUM(pay)/COUNT(*), 0), 0) AS avgPay /* 1회 요금 - 미동승 */ , COALESCE(ROUND(SUM(dutch_pay)/COUNT(*), 0), 0) AS avgDutchPay /* 1회 요금 - 동승 */ FROM boarding_user bu INNER JOIN boarding_push bp ON bu.board_no = bp.board_no WHERE bu.user_id = 'dafd' AND DATE_FORMAT(bp.reg_date, '%Y%m') = DATE_FORMAT(now(), '%Y%m') 
+2021-08-20 14:54:03 [http-nio-8080-exec-1] [DEBUG] c.t.p.mapper.UserMapper.getTotalPay - ==> Parameters: 
+2021-08-20 14:54:03 [http-nio-8080-exec-1] [DEBUG] c.t.p.mapper.UserMapper.getTotalPay - <==      Total: 1
+2021-08-20 15:29:31 [Thread-5] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:29:31 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-08-20 15:29:31 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-08-20 15:29:31 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19524 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:29:31 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73a09c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:29:31 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 192 ms
+2021-08-20 15:29:32 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:29:32 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:29:32 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:29:32 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:29:32 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.474 seconds (JVM running for 2145.588)
+2021-08-20 15:29:32 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 15:29:55 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2021-08-20 15:29:57 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2021-08-20 15:29:57 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'dafd' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 15:29:57 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 15:29:57 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - <==      Total: 5
+2021-08-20 15:33:16 [Thread-8] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:33:16 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2021-08-20 15:33:16 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2021-08-20 15:33:16 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19524 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:33:16 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73a09c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 155 ms
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:33:16 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.305 seconds (JVM running for 2370.083)
+2021-08-20 15:33:16 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getTodayBoardingGroup call in BoardController ==> 
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getTodayBoardingGroup call in BoardService ==> 
+2021-08-20 15:33:28 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2021-08-20 15:33:30 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2021-08-20 15:33:30 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */ * FROM ( SELECT bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , bb.start_area AS startArea /* 출발지 */ , bb.end_area AS endArea /* 도착지 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bu.leader_yn AS leaderYn /* 그룹장 여부 */ , 'N' AS fixYn /* 확정여부 */ FROM boarding_board bb INNER JOIN boarding_user bu ON bb.board_no = bu.board_no WHERE bu.user_id = 'kwonk' AND SUBSTR(bb.boarding_date,1,8) = DATE_FORMAT(now(), '%Y%m%d') AND COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) = 0 /* AND SUBSTR(bb.boarding_date,9,4) >= DATE_FORMAT(now(), '%H%i') */ UNION ALL SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , bb.start_area AS startArea /* 출발지 */ , bb.end_area AS endArea /* 도착지 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bu.leader_yn AS leaderYn /* 그룹장 여부 */ , 'Y' AS fixYn /* 확정여부 */ FROM boarding_board bb INNER JOIN boarding_user bu ON bb.board_no = bu.board_no WHERE bu.user_id = 'kwonk' AND COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) > 0 AND COALESCE((SELECT COUNT(*) FROM boarding_push WHERE board_no = bb.board_no), 0) = 0 /* 종료된 데이터 조회 안되게 처리 */ ) T ORDER BY T.boardingDate, T.boardingTime 
+2021-08-20 15:33:30 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - ==> Parameters: 
+2021-08-20 15:33:31 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - <==      Total: 1
+2021-08-20 15:43:25 [Thread-13] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:43:25 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2021-08-20 15:43:25 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2021-08-20 15:43:25 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19524 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:43:25 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73a09c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 165 ms
+2021-08-20 15:43:25 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:43:26 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:43:26 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:43:26 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:43:26 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.384 seconds (JVM running for 2979.551)
+2021-08-20 15:43:26 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 15:43:28 [RMI TCP Connection(70)-127.0.0.1] [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2021-08-20 15:43:28 [RMI TCP Connection(70)-127.0.0.1] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:49:34 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19882 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:49:34 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:49:34 [restartedMain] [INFO ] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-netty-shaded-1.13.1.jar referenced one or more files that do not exist: file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-core-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-context-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/gson-2.7.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/guava-20.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/error_prone_annotations-2.1.2.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/jsr305-3.0.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-contrib-grpc-metrics-0.12.3.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-api-0.12.3.jar
+2021-08-20 15:49:34 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-20 15:49:34 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-20 15:49:35 [restartedMain] [DEBUG] org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7618db76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:49:35 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 926 ms
+2021-08-20 15:49:36 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:49:36 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:49:36 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:49:36 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:49:36 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 1.935 seconds (JVM running for 2.611)
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 15:49:47 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-08-20 15:49:49 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-08-20 15:49:49 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ' SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardintDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 15:49:49 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 15:49:50 [http-nio-8080-exec-2] [ERROR] jdbc.sqltiming - 1. PreparedStatement.execute() FAILED! SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime									/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' '
+			 	SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardintDT
+			 , start_area AS startArea																								/* 출발지 */
+			 , start_x AS startX																									/* 출발지 x좌표 */
+			 , start_y AS startY																									/* 출발지 y좌표 */
+			 , end_area AS endArea																									/* 도착지 */
+			 , end_x AS endX																										/* 도착지 x좌표 */
+			 , end_y AS endY																										/* 도착지 y좌표 */
+			 , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons									/* 현재인원 */
+			 , 4 AS maxPersons																										/* 최대인원 */
+			 , bb.writer																											/* 작성자 */
+			 , content																												/* 내용 */
+			 , CASE WHEN COALESCE(bu.board_no, 0) > 0 
+			 		THEN 'Y' 
+			 		ELSE 'N'
+			   END AS boardingYn																									/* 신청여부 */
+		FROM   boarding_board bb LEFT OUTER JOIN boarding_user bu
+											  ON bu.board_no = bb.board_no
+											 AND bu.user_id = 'kwonk'
+		WHERE  boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') 											/* 현재시간 이후의 게시물만 노출되게 처리 */
+		  AND  (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0					/* 탑승완료처리된 데이터 제외 */
+		ORDER BY boarding_date
+ {FAILED after 198 msec}
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardintDT' at line 7
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy74.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy55.getBoardList(Unknown Source)
+	at com.taxi.project.service.BoardService.getBoardList(BoardService.java:57)
+	at com.taxi.project.controller.BoardController.getBoardList(BoardController.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-08-20 15:50:24 [Thread-5] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:50:24 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-08-20 15:50:24 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-08-20 15:50:24 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19882 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:50:24 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7618db76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 183 ms
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:50:24 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.471 seconds (JVM running for 50.896)
+2021-08-20 15:50:24 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 15:50:27 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2021-08-20 15:50:29 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2021-08-20 15:50:29 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ', SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardintDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 15:50:29 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 15:50:29 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - <==      Total: 4
+2021-08-20 15:51:01 [Thread-8] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:51:01 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2021-08-20 15:51:01 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2021-08-20 15:51:01 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19882 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 15:51:01 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7618db76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 147 ms
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 15:51:01 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.299 seconds (JVM running for 87.906)
+2021-08-20 15:51:01 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 15:51:07 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2021-08-20 15:51:09 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2021-08-20 15:51:09 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ', SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardingDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user WHERE board_no = bb.board_no) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 15:51:09 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 15:51:10 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - <==      Total: 4
+2021-08-20 16:47:59 [Thread-13] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 16:47:59 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2021-08-20 16:47:59 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2021-08-20 16:47:59 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 19882 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 16:47:59 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7618db76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 165 ms
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 16:47:59 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.409 seconds (JVM running for 3506.046)
+2021-08-20 16:47:59 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 16:48:02 [RMI TCP Connection(88)-127.0.0.1] [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2021-08-20 16:48:02 [RMI TCP Connection(88)-127.0.0.1] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:44:12 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 17:44:12 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 17:44:12 [restartedMain] [INFO ] o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-netty-shaded-1.13.1.jar referenced one or more files that do not exist: file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-core-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/grpc-context-1.13.1.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/gson-2.7.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/guava-20.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/error_prone_annotations-2.1.2.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/jsr305-3.0.0.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-contrib-grpc-metrics-0.12.3.jar,file:/Users/wj.kim/.m2/repository/io/grpc/grpc-netty-shaded/1.13.1/opencensus-api-0.12.3.jar
+2021-08-20 17:44:12 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-20 17:44:12 [restartedMain] [INFO ] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-20 17:44:12 [restartedMain] [DEBUG] org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2021-08-20 17:44:12 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 17:44:12 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 779 ms
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:44:13 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 17:44:13 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 1.607 seconds (JVM running for 2.291)
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 17:44:29 [http-nio-8080-exec-1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-08-20 17:44:31 [http-nio-8080-exec-1] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-08-20 17:44:31 [http-nio-8080-exec-1] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ', SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardingDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user bu LEFT OUTER JOIN blacklist_usr bku ON bu.user_id = bku.user_id WHERE bu.board_no = bb.board_no AND bku.user_id IS NULL) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 17:44:31 [http-nio-8080-exec-1] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 17:44:31 [http-nio-8080-exec-1] [ERROR] jdbc.sqltiming - 1. PreparedStatement.execute() FAILED! SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime									/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ',
+			 	SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardingDT
+			 , start_area AS startArea																								/* 출발지 */
+			 , start_x AS startX																									/* 출발지 x좌표 */
+			 , start_y AS startY																									/* 출발지 y좌표 */
+			 , end_area AS endArea																									/* 도착지 */
+			 , end_x AS endX																										/* 도착지 x좌표 */
+			 , end_y AS endY																										/* 도착지 y좌표 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_usr bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																										/* 최대인원 */
+			 , bb.writer																											/* 작성자 */
+			 , content																												/* 내용 */
+			 , CASE WHEN COALESCE(bu.board_no, 0) > 0 
+			 		THEN 'Y' 
+			 		ELSE 'N'
+			   END AS boardingYn																									/* 신청여부 */
+		FROM   boarding_board bb LEFT OUTER JOIN boarding_user bu
+											  ON bu.board_no = bb.board_no
+											 AND bu.user_id = 'kwonk'
+		WHERE  boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') 											/* 현재시간 이후의 게시물만 노출되게 처리 */
+		  AND  (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0					/* 탑승완료처리된 데이터 제외 */
+		ORDER BY boarding_date
+ {FAILED after 221 msec}
+java.sql.SQLSyntaxErrorException: Table 'taxiPair.blacklist_usr' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy74.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy55.getBoardList(Unknown Source)
+	at com.taxi.project.service.BoardService.getBoardList(BoardService.java:57)
+	at com.taxi.project.controller.BoardController.getBoardList(BoardController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-08-20 17:45:00 [Thread-5] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:45:00 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-08-20 17:45:00 [Thread-5] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-08-20 17:45:00 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 17:45:00 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 196 ms
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 17:45:00 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.418 seconds (JVM running for 49.464)
+2021-08-20 17:45:00 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 17:45:05 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2021-08-20 17:45:07 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2021-08-20 17:45:07 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ', SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardingDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user bu LEFT OUTER JOIN blackList_user bku ON bu.user_id = bku.user_id WHERE bu.board_no = bb.board_no AND bku.user_id IS NULL) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 17:45:07 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 17:45:07 [http-nio-8080-exec-2] [ERROR] jdbc.sqltiming - 11. PreparedStatement.execute() FAILED! SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime									/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ',
+			 	SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardingDT
+			 , start_area AS startArea																								/* 출발지 */
+			 , start_x AS startX																									/* 출발지 x좌표 */
+			 , start_y AS startY																									/* 출발지 y좌표 */
+			 , end_area AS endArea																									/* 도착지 */
+			 , end_x AS endX																										/* 도착지 x좌표 */
+			 , end_y AS endY																										/* 도착지 y좌표 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blackList_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																										/* 최대인원 */
+			 , bb.writer																											/* 작성자 */
+			 , content																												/* 내용 */
+			 , CASE WHEN COALESCE(bu.board_no, 0) > 0 
+			 		THEN 'Y' 
+			 		ELSE 'N'
+			   END AS boardingYn																									/* 신청여부 */
+		FROM   boarding_board bb LEFT OUTER JOIN boarding_user bu
+											  ON bu.board_no = bb.board_no
+											 AND bu.user_id = 'kwonk'
+		WHERE  boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') 											/* 현재시간 이후의 게시물만 노출되게 처리 */
+		  AND  (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0					/* 탑승완료처리된 데이터 제외 */
+		ORDER BY boarding_date
+ {FAILED after 194 msec}
+java.sql.SQLSyntaxErrorException: Table 'taxiPair.blackList_user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy74.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy54.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy75.getBoardList(Unknown Source)
+	at com.taxi.project.service.BoardService.getBoardList(BoardService.java:57)
+	at com.taxi.project.controller.BoardController.getBoardList(BoardController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-08-20 17:45:31 [Thread-8] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:45:31 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2021-08-20 17:45:31 [Thread-8] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2021-08-20 17:45:31 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 17:45:31 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 170 ms
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 17:45:31 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.335 seconds (JVM running for 80.437)
+2021-08-20 17:45:31 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getBoardList call in BoardController ==> 
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getBoardList call in BoardService ==> 
+2021-08-20 17:45:34 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2021-08-20 17:45:36 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2021-08-20 17:45:36 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ', SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2) ) AS boardingDT , start_area AS startArea /* 출발지 */ , start_x AS startX /* 출발지 x좌표 */ , start_y AS startY /* 출발지 y좌표 */ , end_area AS endArea /* 도착지 */ , end_x AS endX /* 도착지 x좌표 */ , end_y AS endY /* 도착지 y좌표 */ , (SELECT COUNT(*) FROM boarding_user bu LEFT OUTER JOIN blacklist_user bku ON bu.user_id = bku.user_id WHERE bu.board_no = bb.board_no AND bku.user_id IS NULL) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bb.writer /* 작성자 */ , content /* 내용 */ , CASE WHEN COALESCE(bu.board_no, 0) > 0 THEN 'Y' ELSE 'N' END AS boardingYn /* 신청여부 */ FROM boarding_board bb LEFT OUTER JOIN boarding_user bu ON bu.board_no = bb.board_no AND bu.user_id = 'kwonk' WHERE boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') /* 현재시간 이후의 게시물만 노출되게 처리 */ AND (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0 /* 탑승완료처리된 데이터 제외 */ ORDER BY boarding_date 
+2021-08-20 17:45:36 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - ==> Parameters: 
+2021-08-20 17:45:36 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.BoardMapper.getBoardList - <==      Total: 7
+2021-08-20 17:55:03 [Thread-13] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:55:03 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2021-08-20 17:55:03 [Thread-13] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2021-08-20 17:55:03 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 17:55:03 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 146 ms
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 17:55:03 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.291 seconds (JVM running for 652.507)
+2021-08-20 17:55:03 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getRecentlyBoardingGroup call in BoardController ==> 
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getRecentlyMate call in BoardService ==> 
+2021-08-20 17:55:20 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2021-08-20 17:55:22 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2021-08-20 17:55:22 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getRecentlyBoardingGroup - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getRecentlyBoardingGroup */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CASE WHEN bu.leader_yn = 'Y' THEN CONCAT('★', SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', bb.start_area, ' ★') ELSE CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', bb.start_area) END AS title , bb.board_no AS boardNo , bu.leader_yn AS leaderYn , CASE WHEN bu.leader_yn = 'Y' THEN bulst.userList2 ELSE bulst.userList1 END AS userList FROM boarding_board bb INNER JOIN boarding_user bu ON bb.board_no = bu.board_no INNER JOIN boarding_push bp ON bb.board_no = bp.board_no INNER JOIN (SELECT board_no , GROUP_CONCAT(user_id1) as userList1 , GROUP_CONCAT(user_id2) as userList2 FROM (SELECT a.board_no , CASE WHEN a.leader_yn = 'Y' THEN CONCAT('*', a.user_id) ELSE a.user_id END AS user_id1 , a.user_id AS user_id2 FROM boarding_user a LEFT OUTER JOIN blacklist_user b on a.user_id = b.user_id WHERE a.user_id != 'kwonk' AND b.user_id IS NULL) T GROUP BY board_no) bulst ON bb.board_no = bulst.board_no WHERE bu.user_id = 'kwonk' AND (SELECT COUNT(*) FROM blacklist_user WHERE user_id = 'kwonk') = 0 ORDER BY bb.boarding_date DESC LIMIT 5 
+2021-08-20 17:55:22 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getRecentlyBoardingGroup - ==> Parameters: 
+2021-08-20 17:55:22 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getRecentlyBoardingGroup - <==      Total: 4
+2021-08-20 18:20:53 [HikariPool-4 housekeeper] [WARN ] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=16m1s408ms).
+2021-08-20 18:22:18 [Thread-18] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 18:22:18 [Thread-18] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2021-08-20 18:22:18 [Thread-18] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2021-08-20 18:22:18 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 18:22:18 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 136 ms
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 18:22:18 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.276 seconds (JVM running for 1356.149)
+2021-08-20 18:22:18 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [DEBUG] c.t.p.controller.BoardController -  @@ getTodayBoardingGroup call in BoardController ==> 
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [DEBUG] com.taxi.project.service.UserService -  @@ getBlackListUser call in UserService ==> 
+2021-08-20 18:22:35 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.UserMapper.getBlackListUser - ==>  Preparing: SELECT /* com.taxi.project.mapper.UserMapper.getBlackListUser */ count(*) FROM blacklist_user WHERE user_id = 'kwonk' 
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.UserMapper.getBlackListUser - ==> Parameters: 
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.UserMapper.getBlackListUser - <==      Total: 1
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.taxi.project.service.BoardService -  @@ getTodayBoardingGroup call in BoardService ==> 
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - ==>  Preparing: SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */ * FROM ( SELECT bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2) ) AS boardingDT , bb.start_area AS startArea /* 출발지 */ , bb.end_area AS endArea /* 도착지 */ , (SELECT COUNT(*) FROM boarding_user bu LEFT OUTER JOIN blacklist_user bku ON bu.user_id = bku.user_id WHERE bu.board_no = bb.board_no AND bku.user_id IS NULL) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bu.leader_yn AS leaderYn /* 그룹장 여부 */ , 'N' AS fixYn /* 확정여부 */ FROM boarding_board bb INNER JOIN boarding_user bu ON bb.board_no = bu.board_no WHERE bu.user_id = 'kwonk' AND SUBSTR(bb.boarding_date,1,8) = DATE_FORMAT(now(), '%Y%m%d') AND COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) = 0 AND (SELECT COUNT(*) FROM blacklist_user WHERE user_id = 'kwonk') = 0 /* AND SUBSTR(bb.boarding_date,9,4) >= DATE_FORMAT(now(), '%H%i') */ UNION ALL SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */ bb.board_no AS boardNo /* 동승그룹 번호 */ , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate /* 탑승일자 */ , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime /* 탑승시간 */ , CONCAT( SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2) ) AS boardingDT , bb.start_area AS startArea /* 출발지 */ , bb.end_area AS endArea /* 도착지 */ , (SELECT COUNT(*) FROM boarding_user bu LEFT OUTER JOIN blacklist_user bku ON bu.user_id = bku.user_id WHERE bu.board_no = bb.board_no AND bku.user_id IS NULL) AS boardingPersons /* 현재인원 */ , 4 AS maxPersons /* 최대인원 */ , bu.leader_yn AS leaderYn /* 그룹장 여부 */ , 'Y' AS fixYn /* 확정여부 */ FROM boarding_board bb INNER JOIN boarding_user bu ON bb.board_no = bu.board_no WHERE bu.user_id = 'kwonk' AND COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) > 0 AND COALESCE((SELECT COUNT(*) FROM boarding_push WHERE board_no = bb.board_no), 0) = 0 /* 종료된 데이터 조회 안되게 처리 */ AND (SELECT COUNT(*) FROM blacklist_user WHERE user_id = 'kwonk') = 0 ) T ORDER BY T.boardingDate, T.boardingTime 
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - ==> Parameters: 
+2021-08-20 18:22:37 [http-nio-8080-exec-2] [DEBUG] c.t.p.m.B.getTodayBoardingGroup - <==      Total: 0
+2021-08-20 18:35:39 [HikariPool-5 housekeeper] [WARN ] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=9m2s455ms).
+2021-08-20 18:37:10 [Thread-23] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-20 18:37:10 [Thread-23] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2021-08-20 18:37:10 [Thread-23] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2021-08-20 18:37:10 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Starting TaxiPairProjectApplication using Java 15.0.1 on gim-wonjong-ui-MacBookPro.local with PID 20495 (/Users/wj.kim/Desktop/ws/taxiPair_project/target/classes started by wj.kim in /Users/wj.kim/Desktop/ws/taxiPair_project)
+2021-08-20 18:37:10 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - The following profiles are active: local
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b59f8db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 145 ms
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 18:37:10 [restartedMain] [INFO ] c.t.p.TaxiPairProjectApplication - Started TaxiPairProjectApplication in 0.287 seconds (JVM running for 1735.464)
+2021-08-20 18:37:10 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2021-08-20 18:37:13 [RMI TCP Connection(55)-127.0.0.1] [INFO ] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2021-08-20 18:37:13 [RMI TCP Connection(55)-127.0.0.1] [INFO ] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

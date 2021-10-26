@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taxi.project.mapper.BoardMapper">
+
+	<!-- 택시메이트 목록 조회 -->
+	<select id="getBoardList" resultType="hashmap">
+		SELECT /* com.taxi.project.mapper.BoardMapper.getBoardList */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime									/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ',
+			 	SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardingDT
+			 , start_area AS startArea																								/* 출발지 */
+			 , start_x AS startX																									/* 출발지 x좌표 */
+			 , start_y AS startY																									/* 출발지 y좌표 */
+			 , end_area AS endArea																									/* 도착지 */
+			 , end_x AS endX																										/* 도착지 x좌표 */
+			 , end_y AS endY																										/* 도착지 y좌표 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																										/* 최대인원 */
+			 , bb.writer																											/* 작성자 */
+			 , content																												/* 내용 */
+			 , CASE WHEN COALESCE(bu.board_no, 0) > 0 
+			 		THEN 'Y' 
+			 		ELSE 'N'
+			   END AS boardingYn																									/* 신청여부 */
+		FROM   boarding_board bb LEFT OUTER JOIN boarding_user bu
+											  ON bu.board_no = bb.board_no
+											 AND bu.user_id = '${userId}'
+		WHERE  boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') 											/* 현재시간 이후의 게시물만 노출되게 처리 */
+		  AND  (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0					/* 탑승완료처리된 데이터 제외 */
+		ORDER BY boarding_date
+	</select>
+	
+	<!-- 택시메이트 검색 목록 조회 -->
+	<select id="getBoardSearchList" parameterType="hashmap" resultType="hashmap">
+		SELECT /* com.taxi.project.mapper.BoardMapper.getBoardSearchList */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)) AS boardingTime									/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(boarding_date,1,4), '-', SUBSTR(boarding_date,5,2), '-', SUBSTR(boarding_date,7,2), ' ',
+			 	SUBSTR(boarding_date,9,2), ':', SUBSTR(boarding_date,11,2)
+			   ) AS boardingDT
+			 , start_area AS startArea																								/* 출발지 */
+			 , start_x AS startX																									/* 출발지 x좌표 */
+			 , start_y AS startY																									/* 출발지 y좌표 */
+			 , end_area AS endArea																									/* 도착지 */
+			 , end_x AS endX																										/* 도착지 x좌표 */
+			 , end_y AS endY																										/* 도착지 y좌표 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																										/* 최대인원 */
+			 , bb.writer																											/* 작성자 */
+			 , content																												/* 내용 */
+			 , CASE WHEN COALESCE(bu.board_no, 0) > 0 
+			 		THEN 'Y' 
+			 		ELSE 'N'
+			   END AS boardingYn																									/* 신청여부 */
+		FROM   boarding_board bb LEFT OUTER JOIN boarding_user bu
+											  ON bu.board_no = bb.board_no
+											 AND bu.user_id = '${userId}'
+		WHERE  1 = 1
+		  AND  ${field} LIKE CONCAT ('%',#{endArea},'%')
+		  AND  boarding_date > DATE_FORMAT(now(), '%Y%m%d%H%i') 											/* 현재시간 이후의 게시물만 노출되게 처리 */
+		  AND  (SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no) = 0					/* 탑승완료처리된 데이터 제외 */
+		ORDER BY boarding_date
+	</select>
+	
+	<!-- 택시탑승 완료내역 조회 -->
+	<select id="getFixBoardingGroup" parameterType="hashmap" resultType="hashmap">
+		SELECT /* com.taxi.project.mapper.BoardMapper.getFixBoardingGroup */
+			   CONCAT(SUBSTR(bb.boarding_date,1,4), '년 ', SUBSTR(bb.boarding_date,5,2), '월 ', SUBSTR(bb.boarding_date,7,2), '일') AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime												/* 탑승시간 */
+			 , bb.start_area AS startArea																											/* 출발지 */
+			 , bb.end_area AS endArea																												/* 도착지 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																														/* 최대인원 */
+			 , DATE_ADD(
+			 	CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2),' ',SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2),':00')
+			   ,interval bbf.expect_time minute
+			   ) AS expectTime																														/* 예상시간 */
+			 , bbf.expect_pay AS expectPay 																											/* 예상금액 */
+			 , bbf.expect_pay_one AS expectPayOne 																									/* 개인부담금액 */
+			 , bb.writer AS leader																													/* 작성자 - 그룹장 */
+		FROM   boarding_board bb INNER JOIN boarding_board_fixed bbf
+										 ON bb.board_no = bbf.board_no
+		WHERE  bb.board_no = ${boardNo}	
+	</select>
+	
+	<!-- 동승해야 할 그룹정보 조회 -->
+	<select id="getTodayBoardingGroup" parameterType="hashmap" resultType="hashmap">
+		SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */
+				*
+		FROM (
+		SELECT 
+			   bb.board_no AS boardNo																										/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime										/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ',
+			 	SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)
+			   ) AS boardingDT
+			 , bb.start_area AS startArea																									/* 출발지 */
+			 , bb.end_area AS endArea																										/* 도착지 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																												/* 최대인원 */
+			 , bu.leader_yn AS leaderYn																										/* 그룹장 여부 */
+			 , 'N' AS fixYn																													/* 확정여부 */
+		FROM   boarding_board bb INNER JOIN boarding_user bu
+										 ON bb.board_no = bu.board_no
+		WHERE  bu.user_id = '${userId}'	
+		  AND  SUBSTR(bb.boarding_date,1,8) = DATE_FORMAT(now(), '%Y%m%d')
+		  AND  COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) = 0
+		  AND  (SELECT COUNT(*) FROM blacklist_user WHERE user_id = '${userId}') = 0
+		/*  AND  SUBSTR(bb.boarding_date,9,4) >= DATE_FORMAT(now(), '%H%i') */
+		UNION ALL
+		SELECT /* com.taxi.project.mapper.BoardMapper.getTodayBoardingGroup */
+			   bb.board_no AS boardNo																										/* 동승그룹 번호 */
+			 , CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2)) AS boardingDate	/* 탑승일자 */
+			 , CONCAT(SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)) AS boardingTime										/* 탑승시간 */
+			 , CONCAT(
+			 	SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ',
+			 	SUBSTR(bb.boarding_date,9,2), ':', SUBSTR(bb.boarding_date,11,2)
+			   ) AS boardingDT
+			 , bb.start_area AS startArea																									/* 출발지 */
+			 , bb.end_area AS endArea																										/* 도착지 */
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL) AS boardingPersons																		/* 현재인원 */
+			 , 4 AS maxPersons																												/* 최대인원 */
+			 , bu.leader_yn AS leaderYn																										/* 그룹장 여부 */
+			 , 'Y' AS fixYn																													/* 확정여부 */
+		FROM   boarding_board bb INNER JOIN boarding_user bu
+										 ON bb.board_no = bu.board_no
+		WHERE  bu.user_id = '${userId}'	
+		  AND  COALESCE((SELECT COUNT(*) FROM boarding_board_fixed WHERE board_no = bb.board_no), 0) > 0
+		  AND  COALESCE((SELECT COUNT(*) FROM boarding_push WHERE board_no = bb.board_no), 0) = 0									/* 종료된 데이터 조회 안되게 처리 */
+		  AND  (SELECT COUNT(*) FROM blacklist_user WHERE user_id = '${userId}') = 0
+			) T
+		ORDER BY T.boardingDate, T.boardingTime
+	</select>
+	
+	<!-- 최근 택시메이트 조회 -->
+	<select id="getRecentlyBoardingGroup" parameterType="hashmap" resultType="hashmap">
+		SELECT /* com.taxi.project.mapper.BoardMapper.getRecentlyBoardingGroup */
+			   bb.board_no AS boardNo																								/* 동승그룹 번호 */
+			 , CASE WHEN bu.leader_yn = 'Y'
+					THEN CONCAT('★', SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', bb.start_area, ' ★')
+					ELSE CONCAT(SUBSTR(bb.boarding_date,1,4), '-', SUBSTR(bb.boarding_date,5,2), '-', SUBSTR(bb.boarding_date,7,2), ' ', bb.start_area) 
+			   END AS title
+			 , bb.board_no AS boardNo
+			 , bu.leader_yn AS leaderYn
+			 , CASE WHEN bu.leader_yn = 'Y'
+			 		THEN bulst.userList2
+			 		ELSE bulst.userList1
+			   END AS userList
+		FROM   boarding_board bb INNER JOIN boarding_user bu 
+										 ON bb.board_no = bu.board_no
+								 INNER JOIN boarding_push bp
+								 		 ON bb.board_no = bp.board_no 
+								 INNER JOIN (SELECT board_no
+												  , GROUP_CONCAT(user_id1) as userList1
+												  , GROUP_CONCAT(user_id2) as userList2
+											 FROM (SELECT a.board_no
+														, CASE WHEN a.leader_yn = 'Y' THEN CONCAT('*', a.user_id)
+															   ELSE a.user_id 
+														  END AS user_id1
+														, a.user_id AS user_id2
+												   FROM   boarding_user a LEFT OUTER JOIN blacklist_user b
+												   									   on a.user_id = b.user_id
+												   WHERE  a.user_id != '${userId}'
+												     AND  b.user_id IS NULL) T
+											 GROUP BY board_no) bulst
+										 ON bb.board_no = bulst.board_no
+		WHERE  bu.user_id = '${userId}'
+		  AND  (SELECT COUNT(*) FROM blacklist_user WHERE user_id = '${userId}') = 0
+		ORDER BY bb.boarding_date DESC
+		LIMIT  5
+	</select>
+	
+	<select id="leaderChk" parameterType="hashmap" resultType="string">
+		SELECT /* com.taxi.project.mapper.BoardMapper.leaderChk */
+			   leader_yn
+		FROM   boarding_user
+		WHERE  board_no = ${boardNo}
+		  AND  user_id = '${userId}'
+	</select>
+	
+	<!-- 동승그룹 만들기 -->
+	<insert id="createGroup" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.createGroup */
+		INSERT INTO boarding_board (writer, start_area,start_x, start_y, end_area, end_y, end_x, content, boarding_date, reg_date)
+		VALUES ( '${writer}'				/* 작성자 */
+			   , '${startArea}'				/* 출발지 */
+			   , '${startX}'				/* 출발지 x좌표 */
+			   , '${startY}'				/* 출발지 y좌표 */
+			   , '${endArea}'				/* 목적지 */
+			   , '${endX}'					/* 목적지 x좌표 */
+			   , '${endY}'					/* 목적지 y좌표 */
+			   , '${content}'				/* 내용 */
+			   , '${boardingDate}'			/* 탑승일시 */
+			   , NOW()
+			   )
+	</insert>
+
+	<!-- 동승자 정보 등록 -->
+	<insert id="insertBoardingUser" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.insertBoardingUser */
+		INSERT INTO boarding_user
+		<if test='leaderYn == "Y"'>
+			SELECT MAX(board_no)				/* 본인이 등록한 동승그룹 번호 */
+				 , writer						/* 작성자 */
+				 , '${leaderYn}'				/* 그룹장 여부 */
+			FROM   boarding_board
+			WHERE  writer = '${writer}'
+		</if>
+		<if test='leaderYn != "Y"'>
+			VALUES ( ${boardNo}					/* 동승하려는 그룹 번호 */
+				   , '${userId}'				/* 동승자 id */ 
+				   , '${leaderYn}'				/* 그룹장 여부 */
+				   )
+		</if>
+	</insert>
+
+	<!-- 택시탑승 완료처리 -->
+	<insert id="fixBoardingGroup" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.fixBoardingGroup */
+		INSERT INTO boarding_board_fixed
+		SELECT board_no
+			 , '${expectTime}'
+			 , (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL)
+			 , ${expectPay}
+			 , ROUND(${expectPay} 
+			 / (SELECT COUNT(*) 
+			 	FROM   boarding_user bu LEFT OUTER JOIN blacklist_user bku
+			 										 ON bu.user_id = bku.user_id
+			 	WHERE  bu.board_no = bb.board_no
+			 	  AND  bku.user_id IS NULL), 0)
+		FROM   boarding_board bb
+		WHERE  board_no = ${boardNo}
+	</insert>
+	
+	<!-- 택시운행종료 -->
+	<insert id="finishDrive" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.finishDrive */
+		INSERT INTO boarding_push
+		VALUES ( ${boardNo}					/* 동승그룹 번호 */
+			   , ${pay}						/* 금액 */
+			   , ${dutchPay}				/* 더치페이금액 */
+			   , '${bankName}'				/* 은행명 */
+			   , '${bankNo}'				/* 계좌번호 */
+			   , '${pushYn}'				/* 푸시알림여부 */
+			   , NOW()						/* 등록일시 */
+			   )
+	</insert>
+	
+	<!-- 동승 취소 -->
+	<delete id="escapeDrive" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.escapeDrive */
+		DELETE FROM boarding_user
+		WHERE  board_no = ${boardNo}
+		  AND  user_id = '${userId}'
+	</delete>
+	
+	<!-- 동승 취소한 사람이 그룹장일 경우, 해당 게시글도 삭제 -->
+	<delete id="deleteGroup" parameterType="hashmap">
+		/* com.taxi.project.mapper.BoardMapper.deleteGroup */
+		DELETE FROM boarding_board
+		WHERE  board_no = ${boardNo}
+		  AND  writer = '${userId}'
+	</delete>
+</mapper>
