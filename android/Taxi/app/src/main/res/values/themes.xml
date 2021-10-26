@@ -1,0 +1,124 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Taxi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ImageButton.size32.icon20">
+        <item name="android:padding">6dp</item>
+    </style>
+
+
+    <style name="ImageButton">
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="ImageButton.size32">
+        <item name="android:background">@drawable/ripple_32</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+
+    <style name="RoundButton.Mint">
+        <item name="backgroundTint">@color/bg_round_button_mint</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ImageButton.size48.icon20">
+        <item name="android:padding">14dp</item>
+    </style>
+
+
+    <style name="ImageButton.size48">
+        <item name="android:background">@drawable/ripple_48</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+
+    <style name="RoundButton" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+
+    <style name="TextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/sub_grey_8</item>
+    </style>
+
+
+
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/main</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">15dp</item>
+        <item name="boxCornerRadiusBottomStart">15dp</item>
+        <item name="boxCornerRadiusTopEnd">15dp</item>
+        <item name="boxCornerRadiusTopStart">15dp</item>
+    </style>
+
+
+    <style name="TextInputLayoutSqure" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/main</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="FloatingBottomButton_both">
+        <item name="elevation">5dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_10_button_color_background</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Indicator" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="indicatorSize">32dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+
+    <style name="Indicator.Primary">
+        <item name="indicatorColor">@color/main_mint</item>
+    </style>
+</resources>

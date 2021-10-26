@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "59456660974",
+    "project_id": "taxipair-e909e",
+    "storage_bucket": "taxipair-e909e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59456660974:android:cc4961f8a59b40d3071aff",
+        "android_client_info": {
+          "package_name": "com.cm.taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59456660974-t1777adcejnehbfnq6bievbjq72akf79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIdOmEFbZnf46CbksbGwtYHAK9OBae750"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59456660974-t1777adcejnehbfnq6bievbjq72akf79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

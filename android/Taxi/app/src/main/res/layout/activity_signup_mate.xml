@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/exit_setting_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ripple_48"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="탑승시간"
+            android:textColor="@color/main_grey"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="@id/guide_left"
+            app:layout_constraintTop_toBottomOf="@id/exit_setting_btn" />
+
+        <TextView
+            android:id="@+id/tv_boardingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@{viewModel.currentMateItem.entity.boardingDate + ' ' +viewModel.currentMateItem.entity.boardingTime}"
+            android:textColor="@color/main_grey"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="2021년 8월 3일 19:00" />
+
+
+        <TextView
+            android:id="@+id/tv_history_mate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="출발지 : "
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/latest_history_click" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="@{viewModel.currentMateItem.entity.startArea}"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+            app:layout_constraintStart_toEndOf="@+id/tv_history_mate"
+            app:layout_constraintTop_toTopOf="@id/latest_history_click"
+            tools:text="잠실역 2번 출구" />
+
+        <TextView
+            android:id="@+id/tv_use_taxi_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="목적지 : "
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/use_taxi_rate_click" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="@{viewModel.currentMateItem.entity.endArea}"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+            app:layout_constraintStart_toEndOf="@id/tv_use_taxi_rate"
+            app:layout_constraintTop_toTopOf="@id/use_taxi_rate_click"
+            tools:text="송파나루역 2번 출구" />
+
+
+        <TextView
+            android:id="@+id/tv_leave_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="현재인원/최대인원 : "
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/leave_user_click" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="@{@string/peopleCount(viewModel.currentMateItem.entity.boardingPersons,viewModel.currentMateItem.entity.maxPersons)}"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+            app:layout_constraintStart_toEndOf="@id/tv_leave_user"
+            app:layout_constraintTop_toTopOf="@id/leave_user_click"
+            tools:text="3/4" />
+
+
+        <TextView
+            android:id="@+id/tv_write_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="그룹장 게시글"
+            android:textColor="@color/main_grey"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="@id/guide_left"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@{viewModel.currentMateItem.entity.content}"
+            android:textColor="@color/main_grey"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/tv_write_notice"
+            app:layout_constraintTop_toBottomOf="@+id/tv_write_notice"
+            tools:text="5분 기다리다 그냥갑니다." />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="-2sp"
+            android:maxLines="4"
+            android:text="※출발시간과 장소를 잘 보고 신청하세요"
+            android:textColor="@color/pink"
+            android:textSize="16dp"
+            android:visibility="@{viewModel.isUserWriter() ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/view_button" />
+
+
+        <View
+            android:id="@+id/latest_history_click"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="22dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_boardingTime" />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+        <View
+            android:id="@+id/use_taxi_rate_click"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+        <View
+            android:id="@+id/leave_user_click"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                style="@style/RoundButton.Mint"
+                onShortBlockClick="@{() -> viewModel.feachJoinGroup()}"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="동승 신청하기"
+                android:visibility="@{viewModel.isUserWriter() ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:alpha="0.1"
+                tools:visibility="visible" />
+
+
+            <Button
+                style="@style/RoundButton.Mint"
+                onShortBlockClick="@{() -> viewModel.feachFixBoardingGroup()}"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="택시 탑승 완료"
+                android:visibility="@{viewModel.isUserWriter() ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:alpha="0.1"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="26dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="26dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.mate.join.JoinMateGroupViewModel" />
+
+    </data>
+
+</layout>

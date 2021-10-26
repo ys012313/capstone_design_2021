@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/cursor.xml" value="0.10520833333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/ripple_32.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/ripple_48.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/rounded_10_button_gray_background.xml" value="0.22708333333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/shape_round_black.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/shape_round_edit_gray.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/drawable/shape_rount_edit_red.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_boarding_taxi.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_create_mate_group.xml" value="0.12" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_latest_mate.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_search.xml" value="0.12" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_search_mate.xml" value="0.176" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_setting.xml" value="0.176" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_signup.xml" value="0.2" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_signup_mate.xml" value="0.264" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_splash.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_statistics.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/activity_today_taxi_together.xml" value="0.16168478260869565" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/boarding_complete_bottom_sheet_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/latest_item_header_row.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/latest_item_row.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/sacn_taxi_mate_item_row.xml" value="0.1" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/taxi_mate_item_header_row.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/taxi_mate_item_notice_row.xml" value="0.264" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/taxi_mate_item_row.xml" value="0.2" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/today_taxi_mate_boarding_close_item_row.xml" value="0.2" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/today_taxi_mate_boarding_item_row.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/today_taxi_mate_boarding_open_item_row.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/today_taxi_mate_item_row.xml" value="0.264" />
+        <entry key="..\:/Users/user/Downloads/Taxi/app/src/main/res/layout/user_delete_bottom_sheet_dialog.xml" value="0.14947916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

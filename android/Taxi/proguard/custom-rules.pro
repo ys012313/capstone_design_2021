@@ -1,0 +1,2 @@
+-keep class com.cm.taxi.data** { *; }
+-keep class com.github.mikephil.charting.** { *; }

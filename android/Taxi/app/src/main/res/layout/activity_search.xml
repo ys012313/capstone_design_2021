@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.mate.scan.ScanMateViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        dismissKeyboardOnClick="@{true}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="26dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="26dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/back"
+                style="@style/ImageButton.size48.icon20"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="11dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
+            app:boxCornerRadiusTopStart="25dp"
+            app:endIconDrawable="@drawable/ic_textdelete"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/transparent"
+            app:endIconTintMode="src_over"
+            app:layout_constraintLeft_toRightOf="@id/guide_left"
+            app:layout_constraintRight_toLeftOf="@id/guide_right"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textField"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="15dp"
+                android:paddingStart="22dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:imeOptions="actionDone"
+                tools:text="asd"
+                style="@style/TextInputEditText"
+                android:hint="목적지를 검색해주세요."
+                android:text="@={viewModel.query}" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:singleLine="true"
+            duration="@{100}"
+            visibilityWithAnim="@{viewModel.query.empty &amp;&amp; !viewModel.focused}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:textColor="@color/sub_grey_8"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="48dp"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/textInputLayout"
+            app:layout_constraintLeft_toLeftOf="@id/textInputLayout"
+            app:layout_constraintRight_toRightOf="@id/textInputLayout"
+            app:layout_constraintTop_toTopOf="@id/textInputLayout" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:clickable="true"
+            android:focusable="true"
+            dismissKeyboardOnClick="@{true}"
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp"
+            android:paddingBottom="60dp"
+            android:layout_marginTop="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+            tools:listitem="@layout/taxi_mate_item_row" />
+
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:visibility="@{viewModel.loading ? View.VISIBLE : View.GONE}"
+            style="@style/Indicator.Primary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

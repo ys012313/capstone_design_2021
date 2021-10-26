@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/view_button"
+            style="@style/RoundButton.Mint"
+            onShortBlockClick="@{() -> viewModel.onCompleteBoarding(viewModel.fixBoardItem)}"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="택시 운행 종료"
+            android:enabled="@{viewModel.isUserWriter()}"
+            android:visibility="@{viewModel.isUserWriter() ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:alpha="0.1"
+            tools:visibility="visible" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_scollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/view_button">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="탑승시간"
+                    android:textColor="@color/main_grey"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toStartOf="@id/guide_left"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="택시운행중"
+                    android:textColor="#ff0000"
+                    android:textSize="25dp"
+                    app:layout_constraintStart_toEndOf="@+id/title"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_boardingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@{viewModel.fixBoardItem.boardingDate + ' ' +viewModel.fixBoardItem.boardingTime}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@+id/title"
+                    tools:text="2021년 8월 3일 19:00" />
+
+                <TextView
+                    android:id="@+id/tv_history_mate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="출발지 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/latest_history_click" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{viewModel.fixBoardItem.startArea}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+                    app:layout_constraintStart_toEndOf="@+id/tv_history_mate"
+                    app:layout_constraintTop_toTopOf="@id/latest_history_click"
+                    tools:text="잠실역 2번 출구" />
+
+
+                <TextView
+                    android:id="@+id/tv_use_taxi_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="목적지 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/use_taxi_rate_click" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{viewModel.fixBoardItem.endArea}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+                    app:layout_constraintStart_toEndOf="@id/tv_use_taxi_rate"
+                    app:layout_constraintTop_toTopOf="@id/use_taxi_rate_click"
+                    tools:text="송파나루역 2번 출구" />
+
+                <TextView
+                    android:id="@+id/tv_leave_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="현재인원/최대인원 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/leave_user_click" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{@string/peopleCount(viewModel.fixBoardItem.boardingPersons,viewModel.fixBoardItem.maxPersons)}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+                    app:layout_constraintStart_toEndOf="@id/tv_leave_user"
+                    app:layout_constraintTop_toTopOf="@id/leave_user_click"
+                    tools:text="3/4" />
+
+
+                <TextView
+                    android:id="@+id/tv_prdict_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="도착 예상시간 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_time"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/predict_time" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{viewModel.fixBoardItem.expectTime}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_time"
+                    app:layout_constraintStart_toEndOf="@id/tv_prdict_time"
+                    app:layout_constraintTop_toTopOf="@id/predict_time"
+                    tools:text="오후 7시 53분" />
+
+
+                <TextView
+                    android:id="@+id/tv_prdict_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="도착 예상시간 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_cost"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/predict_cost" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{viewModel.fixBoardItem.stringExpectPay()}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_cost"
+                    app:layout_constraintStart_toEndOf="@id/tv_prdict_cost"
+                    app:layout_constraintTop_toTopOf="@id/predict_cost"
+                    tools:text="오후 7시 53분" />
+
+                <TextView
+                    android:id="@+id/tv_divid_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="개인 부담 금액 : "
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/divid_cost"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toTopOf="@id/divid_cost" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@{viewModel.fixBoardItem.stringExpectPayOne()}"
+                    android:textColor="@color/main_grey"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/divid_cost"
+                    app:layout_constraintStart_toEndOf="@id/tv_divid_cost"
+                    app:layout_constraintTop_toTopOf="@id/divid_cost"
+                    tools:text="오후 7시 53분" />
+
+                <View
+                    android:id="@+id/latest_history_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="22dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_boardingTime" />
+
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+                <View
+                    android:id="@+id/use_taxi_rate_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider" />
+
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+                <View
+                    android:id="@+id/leave_user_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+                <View
+                    android:id="@+id/predict_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_time"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+                <View
+                    android:id="@+id/predict_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/predict_cost"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+                <View
+                    android:id="@+id/divid_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/sub_grey_5"
+                    app:layout_constraintBottom_toBottomOf="@id/divid_cost"
+                    app:layout_constraintEnd_toEndOf="@id/guide_right"
+                    app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="26dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="26dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/content_scollview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="taxi.json"
+            app:lottie_loop="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.complete.BoardginCompleteViewModel" />
+
+    </data>
+
+</layout>

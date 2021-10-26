@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cm.taxi">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".TaxiApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_noti"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Taxi">
+
+        <activity
+            android:name=".view.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.login.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.signup.SignupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.setting.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.mate.SearchMateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.mate.group.CreateMateGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.mate.join.JoinMateGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.home.today.TodayMateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.complete.BoardginCompleteActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.setting.statistics.StatisticsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.setting.latest.LatestMateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.mate.scan.ScanMateActivity" android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".fcm.PushMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

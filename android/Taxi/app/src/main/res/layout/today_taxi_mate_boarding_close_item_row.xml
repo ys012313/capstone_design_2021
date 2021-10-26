@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            onShortBlockClick="@{() -> viewModel.onSelectTaxiMateItem(item)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:foreground="?android:selectableItemBackground"
+            android:paddingStart="16dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp">
+
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_start_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="출발지 : "
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="@{item.boarding.startArea}"
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_start_place"
+                app:layout_constraintTop_toTopOf="@+id/tv_start_place"
+                tools:text="잠실역 2번출구" />
+
+            <TextView
+                android:id="@+id/tv_end_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="목적지 : "
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_start_place" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="@{item.boarding.endArea}"
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_end_place"
+                app:layout_constraintTop_toTopOf="@+id/tv_end_place"
+                tools:text="송파나루역 2번출구" />
+
+            <TextView
+                android:id="@+id/tv_people_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="현재/최대 인원 : "
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_place" />
+
+            <TextView
+                fullColor="@{item.boarding.boardingPersons}"
+                openColor="@{item.boarding.maxPersons}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="@{@string/peopleCount(item.boarding.boardingPersons,item.boarding.maxPersons)}"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/tv_people_amount"
+                app:layout_constraintTop_toTopOf="@+id/tv_people_amount"
+                tools:text="3/4" />
+
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{item.boarding.boardingDT}"
+                android:textColor="@color/main_grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="21-08-03 19:00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.home.today.TodayMateViewModel" />
+
+        <variable
+            name="item"
+            type="com.cm.taxi.view.home.today.TodayItems.StoredBoard.ClosedBoard" />
+
+
+    </data>
+
+
+</layout>

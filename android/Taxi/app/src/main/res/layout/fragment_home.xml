@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+
+                <Button
+                    android:id="@+id/start"
+                    style="@style/RoundButton.Mint"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:alpha="0"
+                    android:onClick="@{() -> viewModel.navToMateSearch()}"
+                    android:text="택시 메이트 찾기"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:alpha="0.1"
+                    tools:visibility="visible" />
+
+
+                <ru.nikartm.support.ImageBadgeView
+                    android:id="@+id/ic_noti_amount"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0"
+                    android:background="@drawable/ic_noti"
+                    android:onClick="@{() -> viewModel.navTodayMate()}"
+                    android:padding="10dp"
+                    app:ibv_badgeColor="@color/main"
+                    app:ibv_badgeLimitValue="false"
+                    app:ibv_badgeTextColor="#ffffff"
+                    app:ibv_badgeTextSize="8sp"
+                    app:ibv_badgeTextStyle="bold"
+                    app:ibv_badgeValue="100"
+                    app:ibv_fixedBadgeRadius="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:alpha="0.1" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/transparent"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/setting"
+                    style="@style/ImageButton.size48.icon20"
+                    android:onClick="@{() -> viewModel.navToSetting()}"
+                    android:src="@drawable/ic_baseline_settings_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/login"
+                    style="@style/ImageButton.size48.icon20"
+                    android:onClick="@{() -> viewModel.navToLogin()}"
+                    android:src="@drawable/ic_baseline_login_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/signup"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/signup"
+                    style="@style/ImageButton.size48.icon20"
+                    android:onClick="@{() -> viewModel.navToUserRegister()}"
+                    android:src="@drawable/ic_baseline_people_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxi Together"
+                    android:textColor="@color/sub_grey_1"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/signup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.home.HomeViewModel" />
+
+    </data>
+
+</layout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">택시투게더</string>
+    <string name="peopleCount">%d/%d</string>
+</resources>

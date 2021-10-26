@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.mate.SearchMateViewModel" />
+        <variable
+            name="item"
+            type="com.cm.taxi.view.mate.SearchItems.Header" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:foreground="?android:selectableItemBackground"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="탑승시간"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_start_place"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_start_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="출발지"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_end_place"
+            app:layout_constraintStart_toEndOf="@+id/tv_date" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_end_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="목적지"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_people_amount"
+            app:layout_constraintStart_toEndOf="@+id/tv_start_place" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_people_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="현재/최대"
+            android:textColor="@color/main_grey"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_end_place"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

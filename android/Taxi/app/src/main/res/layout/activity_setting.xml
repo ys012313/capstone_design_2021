@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.setting.SettingViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="26dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="26dp" />
+
+        <ImageButton
+            android:id="@+id/exit_setting_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ripple_48"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:onClick="@{() -> viewModel.onClickNavBackpress()}"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="설정"
+            android:textColor="@color/main_grey"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="@id/guide_left"
+            app:layout_constraintTop_toBottomOf="@id/exit_setting_btn" />
+
+        <View
+            android:id="@+id/latest_history_click"
+            android:onClick="@{() -> viewModel.onClickNavLatestMateScreen()}"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="22dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setting" />
+
+        <TextView
+            android:id="@+id/tv_history_mate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="최근 택시 메이트"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+            app:layout_constraintStart_toStartOf="@id/setting"
+            app:layout_constraintTop_toTopOf="@id/latest_history_click" />
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            style="@style/ImageButton.size32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_frame_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_history_mate"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintTop_toTopOf="@id/tv_history_mate" />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/latest_history_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+        <View
+            android:id="@+id/use_taxi_rate_click"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="@{() -> viewModel.onClickNavUseRateScreen()}"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            android:id="@+id/tv_use_taxi_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="택시 사용 통계"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+            app:layout_constraintStart_toStartOf="@id/setting"
+            app:layout_constraintTop_toTopOf="@id/use_taxi_rate_click" />
+
+        <ImageView
+            android:id="@+id/ic_arrow2"
+            style="@style/ImageButton.size32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_frame_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_use_taxi_rate"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintTop_toTopOf="@id/tv_use_taxi_rate" />
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/use_taxi_rate_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+        <View
+            android:id="@+id/leave_user_click"
+            android:onClick="@{() -> viewModel.onClickDeleteUser()}"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:id="@+id/tv_leave_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="회원 탈퇴"
+            android:textColor="@color/main_grey"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+            app:layout_constraintStart_toStartOf="@id/setting"
+            app:layout_constraintTop_toTopOf="@id/leave_user_click" />
+
+        <ImageView
+            android:id="@+id/ic_arrow3"
+            style="@style/ImageButton.size32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_frame_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_leave_user"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintTop_toTopOf="@id/tv_leave_user" />
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sub_grey_5"
+            app:layout_constraintBottom_toBottomOf="@id/leave_user_click"
+            app:layout_constraintEnd_toEndOf="@id/guide_right"
+            app:layout_constraintStart_toStartOf="@id/guide_left" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

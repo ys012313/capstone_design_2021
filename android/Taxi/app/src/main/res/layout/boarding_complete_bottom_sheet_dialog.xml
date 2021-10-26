@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/rounded_20_white_color_background"
+        android:padding="8dp">
+
+
+        <EditText
+            android:id="@+id/edit_id"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selector_edit"
+            android:hint="운행요금"
+            android:inputType="numberDecimal"
+            android:paddingStart="15dp"
+            android:text="@{viewModel.textTotalCost}"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_id_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_id_title" />
+
+        <EditText
+            android:id="@+id/et_divid_cost"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selector_edit"
+            android:text="@{viewModel.textDividCost}"
+            android:hint="더치페이 금액"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_divid_cost"
+            app:layout_constraintTop_toBottomOf="@id/tv_divid_cost" />
+
+
+        <EditText
+            android:id="@+id/et_bank_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selector_edit"
+            android:hint="은행명"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_bank_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_name" />
+
+        <EditText
+            android:id="@+id/et_bank_number"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_edit"
+            android:hint="계좌번호"
+            android:inputType="numberDecimal"
+            android:paddingStart="15dp"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_bank_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_number" />
+
+
+        <TextView
+            android:id="@+id/tv_id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="운행요금"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_divid_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="더치페이 금액"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_id" />
+
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="은행명"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_divid_cost" />
+
+        <TextView
+            android:id="@+id/tv_bank_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="계좌번호"
+            android:textColor="#252525"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_bank_name" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_one"
+            style="@style/FloatingBottomButton_both"
+            onShortBlockClick="@{() -> viewModel.onClickDenyBottomDialog()}"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_10_button_gray_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="취소"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_two"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_two"
+            style="@style/FloatingBottomButton_both"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="확인"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_one" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.complete.BoardginCompleteViewModel" />
+    </data>
+
+
+</layout>

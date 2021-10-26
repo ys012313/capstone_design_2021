@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/rounded_20_white_color_background"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="정말 회원 탈퇴하시겠습니까?"
+            android:textColor="#252525"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btn_one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_one"
+            style="@style/FloatingBottomButton_both"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_10_button_gray_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="취소"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_two"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_two"
+            style="@style/FloatingBottomButton_both"
+            onShortBlockClick="@{() -> viewModel.onClickApplyBottomDialog()}"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="확인"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_one" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cm.taxi.view.setting.SettingViewModel" />
+    </data>
+
+
+</layout>
